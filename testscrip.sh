@@ -9,9 +9,9 @@ function check_cloud_health(){
 }
 function send_request_to_cloud(pic) {
     curl -X POST ADDRESS_CLOUD 
-    DATE=$(date +"%Y-%m-%d_%H%M")
-    raspistill -vf -hf -o /home/pi/camera/$DATE.jpg
-    curl -T /home/pi/$DATE.jpg ftp://ftp-host-machine//yourwebsite/folder/filename.jpg --user yourftpusername:yourpas
+    #DATE=$(date +"%Y-%m-%d_%H%M")
+    raspistill -vf -hf -o /home/pi/ra.jpg
+    curl -T /home/pi/ra.jpg ftp://ftp-host-machine//yourwebsite/folder/filename.jpg --user yourftpusername:yourpas
 }
 function offline_check(pic) {
     plates = recognise_plate(pic)
