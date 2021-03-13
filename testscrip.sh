@@ -1,4 +1,9 @@
 #!/bin/bash
+
+function enable_motion(){
+	motion
+	filename=$(%t-%v-%Y%m%d%H%M%S)
+}             
 function check_cloud_health(){
     wget -q --spider http://google.com
     if [ $? -eq 0 ]; then
